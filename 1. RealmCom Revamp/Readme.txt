@@ -5,4 +5,4 @@ In here there are several files
 4SgtWinter_BloodRiver(RW) is a Warcraft 3 map that requires Warcraft 3 to play or edit/view like an editor.
 As such I have several little txt files of the code that are part of it.
 
-Text UI - The Code I have written for the custom UI for this mod
+Text UI - The Code I have written for the custom UI for this mod. Arguably not the best but it was written early when I was still not as skilled and hey it works.
