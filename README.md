@@ -6,6 +6,18 @@ Brief Introduction(will keep it very brief)
     I am Burmese/Myanmar and always had an innate interest in Video Games and Programming.
     Below are a run through of the folders and the projects part of it, either personal hobby or from jobs.
 
+Projects:
+
+XXX
+XXX
+XXX
+
+Past Jobs:
+
+XXX
+XXX
+XXX
+
 
 Folder 1: Realm Com Revamp
             My personal Warcraft 3 Modding project Realm Com Revamp. Source File as well as code for it. Not the best but it's something I do for a hobby.
@@ -13,3 +25,7 @@ Folder 1: Realm Com Revamp
             As Warcraft 3 mods usually use both Coding and GUI, I have elected to only show the Coded systems that I made.
 
 Folder 2: ???
+
+Folder 3: ???
+
+Folder 4: ???
