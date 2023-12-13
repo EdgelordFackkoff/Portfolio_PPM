@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://confpvfsbbro7"]
+
+[ext_resource type="Shader" path="res://Board/Shaders/Hologram_Shader.gdshader" id="1_efkuk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_efkuk")
+shader_parameter/line_color = Color(0.25098, 0.658824, 1, 1)
+shader_parameter/line_width = 0.005
+shader_parameter/line_blur = 0.572
+shader_parameter/line_speed = -0.095
+shader_parameter/straight_lines = true
+shader_parameter/interrupt_width = 0.274
+shader_parameter/interrupt_blur = 0.309
+shader_parameter/interrupt_speed = 0.1
+shader_parameter/glow_color = Color(0, 0.466667, 0.796078, 1)
+shader_parameter/glow_itensity = 8.711
+shader_parameter/glow_amount = 17.504
+shader_parameter/flickering = 0.878

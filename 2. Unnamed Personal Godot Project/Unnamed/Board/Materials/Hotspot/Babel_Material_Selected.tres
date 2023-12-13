@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brs0vjlpody2h"]
+
+[ext_resource type="Texture2D" uid="uid://75gp371mw1wx" path="res://Board/Textures/Hotspots/Hotspot_Tex_BBL.jpg" id="1_5ixuo"]
+[ext_resource type="Material" uid="uid://confpvfsbbro7" path="res://Board/Shaders/Hologram_Blue_Selected.tres" id="2_bibuv"]
+
+[resource]
+next_pass = ExtResource("2_bibuv")
+albedo_texture = ExtResource("1_5ixuo")
+emission_enabled = true
+uv1_scale = Vector3(1.905, 1.985, 1.85)
+uv1_offset = Vector3(0, 0.01, 0)
+uv2_scale = Vector3(1.43, 1.43, 1.43)

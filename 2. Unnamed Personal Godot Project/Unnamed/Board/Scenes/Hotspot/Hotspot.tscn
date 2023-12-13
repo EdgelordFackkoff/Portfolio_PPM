@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://qur6uydcu6bf"]
+
+[ext_resource type="Script" path="res://Scripts/Board/Hotspot/Hotspot.gd" id="1_cbpyg"]
+[ext_resource type="Script" path="res://Scripts/Board/Hotspot/Hotspot_Parent.gd" id="1_oae86"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vl2h3"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.5, 0.5, 0.5, 1)
+sky_energy_multiplier = 0.0
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Sky" id="Sky_hskeb"]
+sky_material = SubResource("ProceduralSkyMaterial_vl2h3")
+
+[sub_resource type="Environment" id="Environment_c3kr0"]
+background_mode = 2
+sky = SubResource("Sky_hskeb")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3w3x"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sw4ws"]
+top_radius = 0.43
+bottom_radius = 0.43
+height = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gwlg"]
+albedo_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2v8lo"]
+top_radius = 0.45
+bottom_radius = 0.45
+height = 0.06
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6fh8w"]
+height = 0.5
+
+[node name="Hotspot_Parent" type="Node3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("1_oae86")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c3kr0")
+
+[node name="Hotspot_Node" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105867, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_cbpyg")
+
+[node name="Hotspot_Image" type="MeshInstance3D" parent="Hotspot_Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0220205, 0)
+material_override = SubResource("StandardMaterial3D_k3w3x")
+mesh = SubResource("CylinderMesh_sw4ws")
+
+[node name="Hotspot_Base" type="MeshInstance3D" parent="Hotspot_Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.059455, 0)
+material_override = SubResource("StandardMaterial3D_1gwlg")
+mesh = SubResource("CylinderMesh_2v8lo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hotspot_Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.208709, 0)
+shape = SubResource("CylinderShape3D_6fh8w")
+
+[connection signal="mouse_entered" from="Hotspot_Node" to="Hotspot_Node" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Hotspot_Node" to="Hotspot_Node" method="_on_mouse_exited"]

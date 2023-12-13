@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ekata26b4g6d"]
+
+[node name="Hotspot_Path" type="Node3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.497648, 0)
+sides = 38

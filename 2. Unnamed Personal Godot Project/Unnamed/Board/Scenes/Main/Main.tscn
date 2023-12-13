@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvie8w0mtxd1y"]
+
+[ext_resource type="PackedScene" uid="uid://qur6uydcu6bf" path="res://Board/Scenes/Hotspot/Hotspot.tscn" id="1_p5eil"]
+[ext_resource type="PackedScene" uid="uid://djvotlcgeko5t" path="res://Board/Scenes/Map/Map.tscn" id="1_pym26"]
+[ext_resource type="Script" path="res://Scripts/Camera/Main_Camera.gd" id="2_wijs3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dckqh"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.5, 0.5, 0.5, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Sky" id="Sky_5pfra"]
+sky_material = SubResource("ProceduralSkyMaterial_dckqh")
+
+[sub_resource type="Environment" id="Environment_6w14s"]
+background_mode = 2
+sky = SubResource("Sky_5pfra")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+tonemap_mode = 2
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6w14s")
+
+[node name="Board" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.312787, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Map Layer" type="Node3D" parent="Board"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312787, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Hotspots Layer" type="Node3D" parent="Board/Map Layer"]
+
+[node name="Arabian Emirates" parent="Board/Map Layer/Hotspots Layer" instance=ExtResource("1_p5eil")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 3.38813, 0.151149, -1.70689)
+Hotspot_Name = "Arabian Emirates"
+Hotspot_ID = "ARE"
+Hotspot_Parent_Region_ID = "MDE"
+
+[node name="Iram" parent="Board/Map Layer/Hotspots Layer" instance=ExtResource("1_p5eil")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 2.28693, 0.151149, -2.2936)
+Hotspot_Name = "Iram"
+Hotspot_ID = "IRM"
+Hotspot_Parent_Region_ID = "MDE"
+
+[node name="Ruins_Jerusaleum" parent="Board/Map Layer/Hotspots Layer" instance=ExtResource("1_p5eil")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 1.74535, 0.151149, -3.31357)
+Hotspot_Name = "Ruins of Jerusaleum"
+Hotspot_ID = "JER"
+Hotspot_Parent_Region_ID = "MDE"
+
+[node name="Babel" parent="Board/Map Layer/Hotspots Layer" instance=ExtResource("1_p5eil")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 3.04513, 0.151149, -3.10596)
+Hotspot_Name = "Babel"
+Hotspot_ID = "BBL"
+Hotspot_Parent_Region_ID = "MDE"
+
+[node name="Map" parent="Board/Map Layer" instance=ExtResource("1_pym26")]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0.312787, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Camera_Node" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+script = ExtResource("2_wijs3")
+metadata/_edit_lock_ = true
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Node"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0)
