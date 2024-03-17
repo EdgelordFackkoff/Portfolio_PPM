@@ -21,8 +21,10 @@ XXX
 
 Folder 1: Realm Com Revamp
             My personal Warcraft 3 Modding project Realm Com Revamp. Source File as well as code for it. Not the best but it's something I do for a hobby.
-            But it is something I am proud of and if you don't have Warcraft 3 you can still see the code files for it in the same folder.
-            As Warcraft 3 mods usually use both Coding and GUI, I have elected to only show the Coded systems that I made. Currently discontinued due to schoolwork.
+            But it is something I am proud of and if you don't have Warcraft 3.
+
+            #Update
+            Recent patches have broken the functionability of my custom UI system. Discontinued.
 
 Folder 2: Unamed Godot Project
             Ongoing project in Godot which follows a hybrid 4X, turn based style. Very early in progress. Still ongoing but slow progress due to schoolwork.
@@ -30,4 +32,5 @@ Folder 2: Unamed Godot Project
 Folder 3: HOI4 Designs Collection
             A collection of designs for scenarios or other tidbits I have done for the Hoi4 Mod Teams
 
-Folder 4: ???
+Folder 4: Unnamed Godot Project
+            Side ongoing project in Godot. Meant to be an fps. Still ongoing.
