@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5pqduadakwt8"]
+
+[ext_resource type="Theme" uid="uid://dy1e1f1ojnijn" path="res://Themes/Debug Panel/debug_panel.tres" id="1_j01i1"]
+[ext_resource type="Script" path="res://Scripts/UI/Ingame/debug_panel.gd" id="2_rxjq8"]
+
+[node name="debug_panel" type="PanelContainer" node_paths=PackedStringArray("property_container")]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 50.0
+theme = ExtResource("1_j01i1")
+script = ExtResource("2_rxjq8")
+property_container = NodePath("debug_panel_margin/debug_panel_vbox")
+
+[node name="debug_panel_margin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="debug_panel_vbox" type="VBoxContainer" parent="debug_panel_margin"]
+layout_mode = 2

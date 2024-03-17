@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cnmaa6rn1gg8o"]
+
+[ext_resource type="Texture2D" uid="uid://cjc6hv1im2wfq" path="res://Textures/References/Metal/Metal_3/metal_3.jpg" id="1_pc61p"]
+[ext_resource type="Texture2D" uid="uid://0e2880koycyc" path="res://Textures/References/Metal/Metal_3/metal_3_normal.png" id="2_rqss7"]
+
+[resource]
+albedo_color = Color(0.45098, 0.470588, 0.462745, 1)
+metallic = 1.0
+metallic_specular = 0.4
+metallic_texture = ExtResource("1_pc61p")
+roughness = 0.45
+normal_enabled = true
+normal_texture = ExtResource("2_rqss7")
+uv1_triplanar = true

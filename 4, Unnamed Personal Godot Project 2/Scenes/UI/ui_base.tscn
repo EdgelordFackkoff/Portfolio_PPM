@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d248p2q02t1ue"]
+
+[ext_resource type="PackedScene" uid="uid://b1kj881cwuby8" path="res://Scenes/UI/Ingame/reticle.tscn" id="1_40i58"]
+[ext_resource type="PackedScene" uid="uid://c5pqduadakwt8" path="res://Scenes/UI/Ingame/debug_panel.tscn" id="2_bhkuq"]
+
+[node name="ui_base" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ingame" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="reticle" parent="ingame" instance=ExtResource("1_40i58")]
+layout_mode = 1
+
+[node name="debug_panel" parent="ingame" instance=ExtResource("2_bhkuq")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 200.0
+offset_bottom = 40.0
+
+[node name="menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1

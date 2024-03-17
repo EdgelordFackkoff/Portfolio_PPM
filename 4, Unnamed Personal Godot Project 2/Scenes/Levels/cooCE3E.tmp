@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3 uid="uid://dg3t7hdcp28en"]
+
+[ext_resource type="Material" uid="uid://br8t3inx8slq2" path="res://Materials/Levels/cooking_grounds/cooking_ground_grid.tres" id="1_3dfow"]
+[ext_resource type="Script" path="res://Scenes/Levels/cooking_grounds/cooking_grounds.gd" id="1_d3qiy"]
+[ext_resource type="PackedScene" uid="uid://bjyd77wokscb0" path="res://Scenes/Player/player_controller.tscn" id="2_cid3v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2oe5p"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_81a8h"]
+sky_material = SubResource("ProceduralSkyMaterial_2oe5p")
+
+[sub_resource type="Environment" id="Environment_a6c6r"]
+background_mode = 2
+sky = SubResource("Sky_81a8h")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="GDScript" id="GDScript_i7i2u"]
+
+[sub_resource type="GDScript" id="GDScript_wxans"]
+script/source = "extends \"res://Scripts/Environment/environment.gd\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	#Set type
+	type = 'wall'
+
+	#Set Colission Layers/Masks
+	self.collision_layer = 1 + 12
+	self.collission_mask = 1 + 2 + 3
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_57n85"]
+script/source = "extends Node3D
+
+var type = \"\"
+
+# Get type
+func _gettype():
+	return type
+"
+
+[node name="cooking_grounds" type="Node3D"]
+script = ExtResource("1_d3qiy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a6c6r")
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="terrain" type="Node3D" parent="environment"]
+
+[node name="room_1" type="Node3D" parent="environment/terrain"]
+
+[node name="csg_combiner_room_1" type="CSGCombiner3D" parent="environment/terrain/room_1"]
+
+[node name="walls" type="Node3D" parent="environment/terrain/room_1/csg_combiner_room_1"]
+
+[node name="csg_combiner_walls" type="CSGCombiner3D" parent="environment/terrain/room_1/csg_combiner_room_1/walls"]
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 1024
+script = SubResource("GDScript_i7i2u")
+
+[node name="wall_1" type="CSGBox3D" parent="environment/terrain/room_1/csg_combiner_room_1/walls/csg_combiner_walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55747, 10.1643)
+layers = 1024
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(20, 3, 0.38)
+
+[node name="wall_2" type="CSGBox3D" parent="environment/terrain/room_1/csg_combiner_room_1/walls/csg_combiner_walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55747, -10.0746)
+layers = 1024
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(20, 3, 0.38)
+
+[node name="wall_3" type="CSGBox3D" parent="environment/terrain/room_1/csg_combiner_room_1/walls/csg_combiner_walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.1578, 1.55747, 0.0154371)
+layers = 1024
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(20, 3, 0.38)
+
+[node name="wall_4" type="CSGBox3D" parent="environment/terrain/room_1/csg_combiner_room_1/walls/csg_combiner_walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.1835, 1.55747, 0.0154371)
+layers = 1024
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(20, 3, 0.38)
+
+[node name="floors" type="Node3D" parent="environment/terrain/room_1/csg_combiner_room_1"]
+
+[node name="csg_combiner_floor" type="CSGCombiner3D" parent="environment/terrain/room_1/csg_combiner_room_1/floors"]
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 2048
+script = SubResource("GDScript_wxans")
+
+[node name="floor_1" type="CSGBox3D" parent="environment/terrain/room_1/csg_combiner_room_1/floors/csg_combiner_floor"]
+layers = 2048
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(20, 0.13, 20)
+
+[node name="objects" type="Node3D" parent="environment"]
+
+[node name="dummy_cubes" type="CSGCombiner3D" parent="environment/objects"]
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 4096
+
+[node name="dummy_cube_1" type="CSGBox3D" parent="environment/objects/dummy_cubes"]
+transform = Transform3D(0.832235, 0, -0.554423, 0, 1, 0, 0.554423, 0, 0.832235, 6.48918, 0.577638, -2.67954)
+layers = 4096
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+script = SubResource("GDScript_57n85")
+
+[node name="dummy_cube_2" type="CSGBox3D" parent="environment/objects/dummy_cubes"]
+transform = Transform3D(2.55496, 0, -1.70208, 0, 3.07, 0, 1.70208, 0, 2.55496, -6.54679, 1.63047, -2.67954)
+layers = 4096
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+
+[node name="dummy_cube_3" type="CSGBox3D" parent="environment/objects/dummy_cubes"]
+transform = Transform3D(-1.95355, 0, -0.653648, 0, 2.06, 0, 0.653648, 0, -1.95355, -4.04298, 1.08839, 4.90234)
+layers = 4096
+material_override = ExtResource("1_3dfow")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+
+[node name="entities" type="Node3D" parent="."]
+
+[node name="player" type="Node3D" parent="entities"]
+
+[node name="player" parent="entities/player" instance=ExtResource("2_cid3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="environment2" type="Node3D" parent="."]

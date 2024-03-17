@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://civ24gi0aflik"]
+
+[ext_resource type="Material" uid="uid://cnmaa6rn1gg8o" path="res://Materials/Weapons/CoilCarbine/weapon_coilcarbine_grip.tres" id="1_er85u"]
+
+[node name="coilcarbine_receiver_part" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74415e-13, 0.570434, -1.20689)
+material_override = ExtResource("1_er85u")
+cast_shadow = 0
+size = Vector3(0.175, 0.185, 1.695)

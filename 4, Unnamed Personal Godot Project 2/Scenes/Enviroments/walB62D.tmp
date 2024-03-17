@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://ibq0vgoekr5y"]
+
+[ext_resource type="Material" uid="uid://br8t3inx8slq2" path="res://Materials/Levels/cooking_grounds/cooking_ground_grid.tres" id="1_l34ef"]
+[ext_resource type="Script" path="res://Scripts/Environments/walls.gd" id="2_im2la"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w4241"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dpn62"]
+margin = 0.05
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_okadb"]
+size = Vector3(1.05, 1.05, 1.05)
+
+[node name="wall_mesh" type="MeshInstance3D"]
+material_override = ExtResource("1_l34ef")
+mesh = SubResource("BoxMesh_w4241")
+skeleton = NodePath("wall_static_body")
+script = ExtResource("2_im2la")
+
+[node name="wall_static_body" type="StaticBody3D" parent="."]
+collision_layer = 1024
+collision_mask = 3
+
+[node name="wall_col_shape" type="CollisionShape3D" parent="wall_static_body"]
+shape = SubResource("BoxShape3D_dpn62")
+
+[node name="wall_area_3d" type="Area3D" parent="wall_static_body" groups=["wall"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_static_body/wall_area_3d"]
+shape = SubResource("BoxShape3D_okadb")

@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvgjmpffrm3i3"]
+
+[ext_resource type="Material" uid="uid://c0m20rwkfmgiy" path="res://Materials/Weapons/CoilCarbine/weapon_coilcarbine_mag.tres" id="1_3rwpc"]
+
+[node name="coilcarbine_magazine" type="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09532e-15, -7.10543e-15, -0.0356035)
+material_override = ExtResource("1_3rwpc")
+cast_shadow = 0
+
+[node name="coilcarbine_mag_base" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91426e-13, -1.06244, -0.8419)
+cast_shadow = 0
+size = Vector3(0.47, 1.545, 1)
+
+[node name="coilcarbine_mag_subtractors" type="CSGCombiner3D" parent="coilcarbine_mag_base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.297859, 0, 0)
+cast_shadow = 0
+operation = 2
+
+[node name="coilcarbine_mag_subtractor_1" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.354798)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_2" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.103981)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_3" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.121383)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_4" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.358889)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractors2" type="CSGCombiner3D" parent="coilcarbine_mag_base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.307742, 0, 0)
+cast_shadow = 0
+operation = 2
+
+[node name="coilcarbine_mag_subtractor_1" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.354798)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_2" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.103981)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_3" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.121383)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10
+
+[node name="coilcarbine_mag_subtractor_4" type="CSGCylinder3D" parent="coilcarbine_mag_base/coilcarbine_mag_subtractors2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.358889)
+cast_shadow = 0
+radius = 0.11
+height = 1.547
+sides = 10

@@ -1,0 +1,1997 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfliv7al3x36j"]
+
+[ext_resource type="Script" path="res://Scripts/Player/rig.gd" id="1_0n1su"]
+[ext_resource type="Material" uid="uid://c17rjqe6pe7kw" path="res://Materials/Player/arm_material.tres" id="2_35ee3"]
+[ext_resource type="Material" uid="uid://cmu1i6iqgfv0" path="res://Materials/Player/arm_armor_material.tres" id="3_yu1l5"]
+[ext_resource type="PackedScene" uid="uid://blgcl7xvytnlr" path="res://Scenes/Weapons/coilcarbine.tscn" id="4_6iml6"]
+[ext_resource type="PackedScene" uid="uid://cvgjmpffrm3i3" path="res://Scenes/Weapons/coilcarbine_magazine.tscn" id="5_7eskj"]
+
+[sub_resource type="Animation" id="Animation_cpdyt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.785398, -1.5708, -1.5708)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.10543e-15, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.55271e-15, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.500615, 1.59467, 3.13013)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint/csg_right_hand_thumb_1/csg_right_hand_thumb_joint_2:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.32372e-14, -1.09153e-21, -1.00721e-13)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint/csg_right_hand_index_1/csg_right_hand_index_joint_2:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.58191e-14, -1.1825e-21, -1.15982e-13)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint/csg_right_hand_middle_1/csg_right_hand_middle_joint_2:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.57825e-14, -1.5064e-21, -1.98576e-13)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint/csg_right_hand_ring_1/csg_right_hand_ring_joint_2:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97547e-09, -1.18758e-08, -0.490998)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.05216e-14, -8.57808e-22, -2.09709e-13)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint/csg_right_hand_pinky_1/csg_right_hand_pinky_joint2:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97549e-09, -1.18758e-08, -0.490998)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2, 0, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.785398, -1.5708, -1.5708)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.10543e-15, 0, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.55271e-15, 0, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.500615, 1.59467, 3.13013)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint/csg_left_hand_thumb_1/csg_left_hand_thumb_joint_2:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.32372e-14, -1.09153e-21, -1.00721e-13)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint/csg_left_hand_index_1/csg_left_hand_index_joint_2:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.58191e-14, -1.1825e-21, -1.15982e-13)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint/csg_left_hand_middle_1/csg_left_hand_middle_joint_2:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.57825e-14, -1.5064e-21, -1.98576e-13)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint/csg_left_hand_ring_1/csg_left_hand_ring_joint_2:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97547e-09, -1.18758e-08, -0.490998)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.74694e-14, 5.43509e-15, -2.30269e-13)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint/csg_left_hand_pinky_1/csg_left_hand_pinky_joint2:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97549e-09, -1.18758e-08, -0.490998)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.17558, -0.0196229, -1.65801)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:visible")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0429239, -1.58583, 1.77506)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.635246, 0.659513, 0.640513)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine/coilcarbine_magazine:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_37v2t"]
+resource_name = "coilgun_idle"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.129123, 3.08542, 3.11207)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.11662, -2.20648, -1.91256)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.10943, 0.854761, -0.968061)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0439678, 0.451637, -0.357013)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.82205, 0.837758, 3.12938)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint/csg_right_hand_thumb_1/csg_right_hand_thumb_joint_2:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.32372e-14, -1.09153e-21, -1.00721e-13)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint/csg_right_hand_index_1/csg_right_hand_index_joint_2:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.58191e-14, -1.1825e-21, -1.15982e-13)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint/csg_right_hand_middle_1/csg_right_hand_middle_joint_2:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.57825e-14, -1.5064e-21, -1.98576e-13)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint/csg_right_hand_ring_1/csg_right_hand_ring_joint_2:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97547e-09, -1.18758e-08, -0.490998)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.05216e-14, -8.57808e-22, -2.09709e-13)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint/csg_right_hand_pinky_1/csg_right_hand_pinky_joint2:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97549e-09, -1.18758e-08, -0.490998)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.59203, -2.59411, 2.2541), Vector3(1.59203, -2.59411, 2.2541)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.903922, -2.18355, -2.82931), Vector3(0.90059, -2.18341, -2.82918)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.743622, -3.1303, 0.142467)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.491181, -0.595524, 0.180778)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.279253, 0.144862, -2.75762)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint/csg_left_hand_thumb_1/csg_left_hand_thumb_joint_2:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.495674, 0, 0.307178)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint/csg_left_hand_index_1/csg_left_hand_index_joint_2:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.432842, 0, -0.490438)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, 0, 0.246091)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint/csg_left_hand_middle_1/csg_left_hand_middle_joint_2:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.623083, 0, -0.490438)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.495674, 0, -0.123918)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint/csg_left_hand_ring_1/csg_left_hand_ring_joint_2:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.235619, 0, -0.490438)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.308923, 0, -0.165806)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint/csg_left_hand_pinky_1/csg_left_hand_pinky_joint2:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.18675, 0, -0.490438)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.176466, -0.0562325, -1.64531)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.709759, 0.104654, 3.49836)]
+}
+
+[sub_resource type="Animation" id="Animation_hj3k2"]
+resource_name = "coilgun_reload_1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.129123, 3.08542, 3.11207)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.11662, -2.20648, -1.91256)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.10943, 0.854761, -0.968061)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.661725, 0.0149403, -0.280892)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0439678, 0.451637, -0.357013)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.82205, 0.837758, 3.12938)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint/csg_right_hand_thumb_1/csg_right_hand_thumb_joint_2:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.32372e-14, -1.09153e-21, -1.00721e-13)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint/csg_right_hand_index_1/csg_right_hand_index_joint_2:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.58191e-14, -1.1825e-21, -1.15982e-13)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint/csg_right_hand_middle_1/csg_right_hand_middle_joint_2:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9755e-09, -1.18758e-08, -0.490998)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.57825e-14, -1.5064e-21, -1.98576e-13)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint/csg_right_hand_ring_1/csg_right_hand_ring_joint_2:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97547e-09, -1.18758e-08, -0.490998)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.05216e-14, -8.57808e-22, -2.09709e-13)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint/csg_right_hand_pinky_1/csg_right_hand_pinky_joint2:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.97549e-09, -1.18758e-08, -0.490998)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.59203, -2.59411, 2.2541), Vector3(1.59203, -2.59411, 2.2541)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.903922, -2.18355, -2.82931), Vector3(0.90059, -2.18341, -2.82918)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.743622, -3.1303, 0.142467)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.491181, -0.595524, 0.180778)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.46405e-22, 0.785398, -8.01361e-15)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.279253, 0.144862, -2.75762)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint/csg_left_hand_thumb_1/csg_left_hand_thumb_joint_2:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.78606e-09, -6.20882e-09, 2.9217e-08)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.495674, 0, 0.307178)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint/csg_left_hand_index_1/csg_left_hand_index_joint_2:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.432842, 0, -0.490438)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, 0, 0.246091)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint/csg_left_hand_middle_1/csg_left_hand_middle_joint_2:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.623083, 0, -0.490438)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.495674, 0, -0.123918)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint/csg_left_hand_ring_1/csg_left_hand_ring_joint_2:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.235619, 0, -0.490438)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.308923, 0, -0.165806)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint/csg_left_hand_pinky_1/csg_left_hand_pinky_joint2:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.18675, 0, -0.490438)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.176466, -0.0562325, -1.64531)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.709759, 0.104654, 3.49836)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:visible")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0429239, -1.58583, 1.77506)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines/coilcarbine_magazine_lh:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.635246, 0.659513, 0.640513)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine/coilcarbine_magazine:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bsyi3"]
+_data = {
+"RESET": SubResource("Animation_cpdyt"),
+"coilgun_idle": SubResource("Animation_37v2t"),
+"coilgun_reload_1": SubResource("Animation_hj3k2")
+}
+
+[node name="fps_rig" type="Node3D"]
+script = ExtResource("1_0n1su")
+
+[node name="arms" type="Node3D" parent="."]
+
+[node name="csg_arms_combiner" type="CSGCombiner3D" parent="arms"]
+
+[node name="right_arm" type="Node3D" parent="arms/csg_arms_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00556922, 0, 0)
+
+[node name="csg_right_arm_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm"]
+
+[node name="right_arm" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner"]
+
+[node name="csg_upper_arm_right" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm"]
+transform = Transform3D(0.707107, -1.06027e-06, -0.707107, -0.707107, -2.55972e-06, -0.707107, -1.06027e-06, 1, -2.55972e-06, -2, 0, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+sides = 12
+
+[node name="csg_upper_arm_right_armor_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right"]
+
+[node name="upper_arm_right_armor" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner"]
+
+[node name="csg_upper_arm_right_armor" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0, 0)
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+radius = 0.7
+
+[node name="csg_upper_arm_right_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor"]
+operation = 2
+
+[node name="csg_upper_arm_right_armor_subtractor_tube" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor/csg_upper_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -3.55271e-15, 1, 0, 0, 0)
+height = 2.5
+sides = 12
+
+[node name="csg_upper_arm_right_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor/csg_upper_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, -2.55338e-08, -0.584145)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_right_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor/csg_upper_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -7.10543e-15, 1, -2.58934e-15, -1, 0, -5.96046e-08, -0.632411, 2.89106e-10, 0.00661397)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_right_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor/csg_upper_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -7.10543e-15, 1, -2.58934e-15, -1, 0, -5.96046e-08, 0.527345, 2.89106e-10, 0.00661409)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_right_armor_subtractor_4" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_upper_arm_right_armor_combiner/upper_arm_right_armor/csg_upper_arm_right_armor/csg_upper_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, 2.50753e-08, 0.573655)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_right_joint_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, 0, 1, 0, 0, 0)
+
+[node name="right_arm_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, 0, 0)
+
+[node name="csg_right_arm_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 1.25406, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_lower_arm_right_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint"]
+
+[node name="lower_arm_right" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.13163e-14, 0, 0, 1, 0, 2.47841, -1.19209e-07)
+
+[node name="csg_lower_arm_right" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76837e-07, -1.25406, -6.55651e-07)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+sides = 12
+
+[node name="csg_lower_arm_right_armor_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right"]
+cast_shadow = 0
+
+[node name="lower_arm_right_armor" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0)
+
+[node name="csg_lower_arm_right_armor" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor"]
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+radius = 0.7
+
+[node name="csg_lower_arm_right_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor"]
+operation = 2
+
+[node name="csg_lower_arm_right_armor_subtractor_tube" type="CSGCylinder3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor/csg_lower_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0)
+height = 2.5
+sides = 12
+
+[node name="csg_lower_arm_right_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor/csg_lower_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, -0.584145)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_right_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor/csg_lower_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -3.55271e-15, 1, -1.64203e-15, -1, 0, -5.96046e-08, -0.632411, 0, 0.00661397)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_right_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor/csg_lower_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -3.55271e-15, 1, -1.64203e-15, -1, 0, -5.96046e-08, 0.527345, 0, 0.00661409)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_right_armor_subtractor_4" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_lower_arm_right_armor_combiner/lower_arm_right_armor/csg_lower_arm_right_armor/csg_lower_arm_right_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0.573655)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_right_hand_joint_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right"]
+
+[node name="csg_right_hand_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0)
+
+[node name="csg_right_hand_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 1.24086, 5.96046e-08)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 0, 1, 0, -1.10897, 0)
+
+[node name="right_hand" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container"]
+
+[node name="csg_right_hand" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand"]
+transform = Transform3D(0.940452, 5.66648e-15, 0.632861, -1.06581e-14, 1, 8.47033e-22, -0.940452, -5.66648e-15, 0.632861, 4.76837e-07, 1.61147, -4.76837e-07)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand"]
+transform = Transform3D(0.522916, -0.852385, 2.94369e-08, 0.852385, 0.522915, 1.64761e-08, -2.94368e-08, 1.6476e-08, 1, -0.779199, 0.251901, -8.69936e-09)
+cast_shadow = 0
+operation = 2
+size = Vector3(1.245, 0.745, 1)
+
+[node name="csg_right_hand_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand"]
+transform = Transform3D(0.052336, -0.99863, 2.11758e-22, 0.99863, 0.052336, 0, 0, 0, 1, -0.251916, 0.251901, 0.991692)
+cast_shadow = 0
+operation = 2
+size = Vector3(1.245, 1.935, 1.235)
+
+[node name="csg_right_hand_armor" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, 1.05879e-22, 0, 1, 0, 0, 0)
+cast_shadow = 0
+
+[node name="right_hand_armor" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor"]
+transform = Transform3D(1, 0, -1.05879e-22, 0, 1, -1.77636e-15, 2.11758e-22, 0, 1, 0, 0, -0.00457038)
+
+[node name="right_hand_armor" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor"]
+transform = Transform3D(1, 0, -5.82335e-22, 0, 1, 2.30926e-14, 1.48231e-21, 0, 1, 0, 0, 0.0738075)
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+size = Vector3(1.085, 1, 1.23)
+
+[node name="csg_right_hand_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor/right_hand_armor"]
+cast_shadow = 0
+operation = 2
+
+[node name="right_hand_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor/right_hand_armor/csg_right_hand_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 2.64698e-22, 0, 1, -2.30926e-14, -3.17637e-22, 0, 1, 0, 0, 0.147461)
+cast_shadow = 0
+size = Vector3(1, 1, 1.44)
+
+[node name="right_hand_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor/right_hand_armor/csg_right_hand_armor_subtractors_combiner"]
+transform = Transform3D(0.522916, -0.852385, 2.94369e-08, 0.852385, 0.522915, 1.6476e-08, -2.94368e-08, 1.6476e-08, 1, -0.779199, 0.251901, 0.147461)
+cast_shadow = 0
+size = Vector3(1.15, 0.745, 1.615)
+
+[node name="right_hand_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor/right_hand_armor/csg_right_hand_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, -3.17637e-22, 0, 1, -4.61853e-14, 2.43522e-21, 0, 1, 0.0025115, -0.000488281, 0.522818)
+cast_shadow = 0
+size = Vector3(1.675, 1.13, 0.675)
+
+[node name="csg_right_hand_thumb_joint2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_armor/right_hand_armor/right_hand_armor/csg_right_hand_armor_subtractors_combiner"]
+transform = Transform3D(0.0126578, 0.283242, 0.492895, 0.00692713, -0.517565, 0.269741, 0.688849, 2.03308e-08, -0.0117697, 0.472409, 0.11083, 0.0165155)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_finger_joints" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand"]
+transform = Transform3D(1, 0, 6.35275e-22, -3.55271e-15, 1, 2.4869e-14, 0, 0, 1, 0, 0, 0.069237)
+
+[node name="right_hand_thumb_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 0, -5.29396e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_right_hand_thumb_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_thumb_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container"]
+transform = Transform3D(0.0112791, 0.252517, 0.439396, 0.00617423, -0.461423, 0.240463, 0.613864, 1.24477e-06, -0.010492, 0.436369, 0.11083, -0.103061)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_thumb_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint"]
+transform = Transform3D(0.83649, 0.0101558, 1.86265e-09, -0.0146496, 0.145851, -0.800265, -0.0252718, 0.251606, 0.463897, -0.0731016, 0.291797, 0.460655)
+cast_shadow = 0
+size = Vector3(0.77, 1.865, 0.635)
+
+[node name="csg_right_hand_thumb_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint/csg_right_hand_thumb_1"]
+transform = Transform3D(0.900001, -5.5746e-08, -5.58794e-09, 2.62953e-08, 1.908, 7.90745e-09, 5.58794e-09, -1.67638e-08, 0.9, -0.0081888, 1.01423, 0.0588474)
+cast_shadow = 0
+
+[node name="csg_right_hand_thumb_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_thumb_joint/csg_right_hand_thumb_container/csg_right_hand_thumb_joint/csg_right_hand_thumb_1/csg_right_hand_thumb_joint_2"]
+transform = Transform3D(0.823, 5.23869e-10, 1.86265e-09, -4.41651e-09, 0.769, -9.31323e-10, -2.79397e-09, -3.72529e-09, 0.655, -0.00985929, 0.628109, -0.0562134)
+cast_shadow = 0
+size = Vector3(1, 1.19, 1)
+
+[node name="right_hand_index_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_right_hand_index_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint"]
+transform = Transform3D(1, 0, 0, -3.55271e-15, 1, 0, 1.05879e-22, 0, 1, 0, 0, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_index_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container"]
+transform = Transform3D(0.291, 3.7166e-14, -5.15202e-22, -2.93098e-14, 0.369, 1.0968e-14, 3.17636e-22, -8.57453e-15, 0.472, 0.328139, 0.461989, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_index_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint"]
+transform = Transform3D(0.997228, 0.0680785, -1.86454e-09, -0.0744027, 0.912464, 6.70559e-11, 1.86436e-09, 6.57488e-11, 1, 0.0327935, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_right_hand_index_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint/csg_right_hand_index_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.9755e-09, 1.18758e-08, 2.97553e-09, 1, 0.0102048, 0.997632, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_index_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_index_joint/csg_right_hand_index_container/csg_right_hand_index_joint/csg_right_hand_index_1/csg_right_hand_index_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.9755e-09, -1.18758e-08, 2.97548e-09, 1, -0.501374, 0.926777, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="right_hand_middle_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -3.17637e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_right_hand_middle_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_middle_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container"]
+transform = Transform3D(0.291, 3.98978e-14, -5.5814e-22, -3.37508e-14, 0.344, 1.21866e-14, 3.44108e-22, -8.88177e-15, 0.472, 0.00146127, 0.461989, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_middle_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint"]
+transform = Transform3D(0.999918, 0.0157761, -3.14544e-10, -0.0128261, 1.2299, -1.16273e-13, 3.14517e-10, 5.10529e-12, 1, -0.0313773, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_right_hand_middle_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint/csg_right_hand_middle_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.9755e-09, 1.18758e-08, 2.97553e-09, 1, 0.0102048, 0.997632, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_middle_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_middle_joint/csg_right_hand_middle_container/csg_right_hand_middle_joint/csg_right_hand_middle_1/csg_right_hand_middle_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.9755e-09, -1.18758e-08, 2.97548e-09, 1, -0.501373, 0.926777, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="right_hand_ring_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_right_hand_ring_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_ring_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container"]
+transform = Transform3D(0.246, 5.77856e-14, -6.01054e-22, -4.88497e-14, 0.291, 1.82672e-14, 3.70577e-22, -1.33227e-14, 0.399, -0.255553, 0.353774, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_ring_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint"]
+transform = Transform3D(0.881863, -0.471506, 1.18758e-08, 0.471506, 0.881863, 2.97552e-09, -1.18758e-08, 2.97551e-09, 1, -0.558716, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.895, 0.635)
+
+[node name="csg_right_hand_ring_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint/csg_right_hand_ring_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.97547e-09, 1.18758e-08, 2.97555e-09, 1, 0.037714, 1.17963, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_ring_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_ring_joint/csg_right_hand_ring_container/csg_right_hand_ring_joint/csg_right_hand_ring_1/csg_right_hand_ring_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.97549e-09, -1.18758e-08, 2.97548e-09, 1, -0.565642, 1.00633, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.72, 0.635)
+
+[node name="right_hand_pinky_joint" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_right_hand_pinky_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_pinky_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container"]
+transform = Transform3D(0.216, 6.10253e-14, -3.42265e-22, -4.52971e-14, 0.291, 1.21781e-14, 1.85288e-22, -8.88179e-15, 0.399, -0.415213, 0.0834584, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_pinky_1" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint"]
+transform = Transform3D(0.724039, -0.689758, 1.73729e-08, 0.68976, 0.724039, 6.95062e-09, -1.7373e-08, 6.95061e-09, 1, -0.815309, 0.776979, -0.0380531)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_right_hand_pinky_joint2" type="CSGSphere3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint/csg_right_hand_pinky_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.97549e-09, 1.18758e-08, 2.97554e-09, 1, 0.0308323, 1.02361, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_right_hand_pinky_2" type="CSGBox3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/csg_right_hand/csg_right_hand_finger_joints/right_hand_pinky_joint/csg_right_hand_pinky_container/csg_right_hand_pinky_joint/csg_right_hand_pinky_1/csg_right_hand_pinky_joint2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.97549e-09, -1.18758e-08, 2.97547e-09, 1, -0.481831, 0.873873, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="weapons" type="Node3D" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand"]
+transform = Transform3D(0.746536, -0.652497, 0.130118, -0.0192437, 0.174308, 0.984503, -0.665066, -0.737471, 0.117571, 0.0553243, 2.07829, -0.00744772)
+
+[node name="coilcarbine" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons" instance=ExtResource("4_6iml6")]
+transform = Transform3D(-0.0905009, 0.99571, -0.0193199, -0.980884, -0.0857641, 0.174679, 0.172273, 0.0347593, 0.984435, 0, 0, 0)
+
+[node name="player" type="Node" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine"]
+
+[node name="coilcarbine_magazine" parent="arms/csg_arms_combiner/right_arm/csg_right_arm_combiner/right_arm/csg_upper_arm_right/csg_right_joint_combiner/right_arm_joint/csg_right_arm_joint/csg_lower_arm_right_combiner/lower_arm_right/csg_lower_arm_right/csg_right_hand_joint_combiner/csg_right_hand_joint/csg_right_hand_joint/csg_right_hand_container/right_hand/weapons/coilcarbine" instance=ExtResource("5_7eskj")]
+transform = Transform3D(0.999999, 3.72529e-08, 5.96046e-08, 7.82311e-08, 0.999999, -1.49012e-07, -2.08616e-07, -2.98023e-08, 1, -0.112261, 0.0660307, -0.586504)
+
+[node name="left_arm" type="Node3D" parent="arms/csg_arms_combiner"]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 3.74053, 0, 0)
+
+[node name="csg_left_arm_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm"]
+
+[node name="left_arm" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner"]
+transform = Transform3D(1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 0, -8.74228e-08, 7.64274e-15, -1, 3.74006, 0, 0)
+
+[node name="csg_upper_arm_left" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm"]
+transform = Transform3D(0.707107, -1.06027e-06, -0.707107, -0.707107, -2.55972e-06, -0.707107, -1.06027e-06, 1, -2.55972e-06, -2, 0, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+sides = 12
+
+[node name="csg_upper_arm_left_armor_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left"]
+
+[node name="upper_arm_left_armor" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner"]
+
+[node name="csg_upper_arm_left_armor" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor"]
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+radius = 0.7
+
+[node name="csg_upper_arm_left_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor"]
+operation = 2
+
+[node name="csg_upper_arm_left_armor_subtractor_tube" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor/csg_upper_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -3.55271e-15, 1, 0, 0, 0)
+height = 2.5
+sides = 12
+
+[node name="csg_upper_arm_left_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor/csg_upper_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, -2.55338e-08, -0.584145)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_left_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor/csg_upper_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -7.10543e-15, 1, -2.58934e-15, -1, 0, -5.96046e-08, -0.632411, 2.89106e-10, 0.00661397)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_left_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor/csg_upper_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -7.10543e-15, 1, -2.58934e-15, -1, 0, -5.96046e-08, 0.527345, 2.89106e-10, 0.00661409)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_upper_arm_left_armor_subtractor_4" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_upper_arm_left_armor_combiner/upper_arm_left_armor/csg_upper_arm_left_armor/csg_upper_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, 2.50753e-08, 0.573655)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_left_joint_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, 0, 1, 0, 0, 0)
+
+[node name="left_arm_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, 0, 1, 0, 0, 0)
+
+[node name="csg_left_arm_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 4.76837e-07, 1.25406, -3.93391e-06)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_lower_arm_left_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint"]
+
+[node name="lower_arm_left" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.13163e-14, 0, 0, 1, 0, 2.47841, -1.19209e-07)
+
+[node name="csg_lower_arm_left" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25406, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+sides = 12
+
+[node name="csg_lower_arm_left_armor_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left"]
+cast_shadow = 0
+
+[node name="lower_arm_left_armor" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner"]
+
+[node name="csg_lower_arm_left_armor" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor"]
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+radius = 0.7
+
+[node name="csg_lower_arm_left_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor"]
+operation = 2
+
+[node name="csg_lower_arm_left_armor_subtractor_tube" type="CSGCylinder3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor/csg_lower_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0)
+height = 2.5
+sides = 12
+
+[node name="csg_lower_arm_left_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor/csg_lower_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, -0.584145)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_left_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor/csg_lower_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -3.55271e-15, 1, -1.64203e-15, -1, 0, -5.96046e-08, -0.632411, 0, 0.00661397)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_left_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor/csg_lower_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(-5.96046e-08, 0, 1, -3.55271e-15, 1, -1.64203e-15, -1, 0, -5.96046e-08, 0.527345, 0, 0.00661409)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_lower_arm_left_armor_subtractor_4" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_lower_arm_left_armor_combiner/lower_arm_left_armor/csg_lower_arm_left_armor/csg_lower_arm_left_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0.573655)
+size = Vector3(0.095, 2.03, 0.335)
+
+[node name="csg_left_hand_joint_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left"]
+
+[node name="csg_left_hand_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, 0, 1, 0, 0, 0)
+
+[node name="csg_left_hand_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 3.57628e-07, 1.24086, 2.38419e-07)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 0, 1, 0, -1.10897, 0)
+
+[node name="left_hand" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container"]
+
+[node name="csg_left_hand" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand"]
+transform = Transform3D(0.940452, 5.66648e-15, 0.632861, -1.06581e-14, 1, 8.47033e-22, -0.940452, -5.66648e-15, 0.632861, 1.19209e-07, 1.61147, -2.38419e-07)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand"]
+transform = Transform3D(0.522916, -0.852385, 2.94369e-08, 0.852385, 0.522915, 1.64761e-08, -2.94368e-08, 1.6476e-08, 1, -0.779199, 0.251901, -8.69936e-09)
+cast_shadow = 0
+operation = 2
+size = Vector3(1.245, 0.745, 1)
+
+[node name="csg_left_hand_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand"]
+transform = Transform3D(0.052336, -0.99863, 2.11758e-22, 0.99863, 0.052336, 0, 0, 0, 1, -0.251916, 0.251901, 0.991692)
+cast_shadow = 0
+operation = 2
+size = Vector3(1.245, 1.935, 1.235)
+
+[node name="csg_left_hand_armor" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, 1.05879e-22, 0, 1, 0, 0, 0)
+
+[node name="left_hand_armor" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor"]
+transform = Transform3D(1, 0, -1.05879e-22, 0, 1, -1.77636e-15, 2.11758e-22, 0, 1, 0, 0, -0.00457038)
+
+[node name="left_hand_armor" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor"]
+transform = Transform3D(1, 0, -5.82335e-22, 0, 1, 2.4869e-14, 1.48231e-21, 0, 1, 0, 0, 0.0738075)
+material_override = ExtResource("3_yu1l5")
+cast_shadow = 0
+size = Vector3(1.085, 1, 1.23)
+
+[node name="csg_left_hand_armor_subtractors_combiner" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor/left_hand_armor"]
+operation = 2
+
+[node name="left_hand_armor_subtractor_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor/left_hand_armor/csg_left_hand_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, 2.64698e-22, 0, 1, -2.30926e-14, -3.17637e-22, 0, 1, 0, 0, 0.147461)
+cast_shadow = 0
+size = Vector3(1, 1, 1.44)
+
+[node name="left_hand_armor_subtractor_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor/left_hand_armor/csg_left_hand_armor_subtractors_combiner"]
+transform = Transform3D(0.522916, -0.852385, 2.94369e-08, 0.852385, 0.522915, 1.6476e-08, -2.94368e-08, 1.6476e-08, 1, -0.779199, 0.251901, 0.147461)
+cast_shadow = 0
+size = Vector3(1.15, 0.745, 1.615)
+
+[node name="left_hand_armor_subtractor_3" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor/left_hand_armor/csg_left_hand_armor_subtractors_combiner"]
+transform = Transform3D(1, 0, -3.17637e-22, 0, 1, -4.61853e-14, 2.43522e-21, 0, 1, 0.0025115, -0.000488281, 0.522818)
+cast_shadow = 0
+size = Vector3(1.675, 1.13, 0.675)
+
+[node name="csg_left_hand_thumb_joint2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_armor/left_hand_armor/left_hand_armor/csg_left_hand_armor_subtractors_combiner"]
+transform = Transform3D(0.0126578, 0.283242, 0.492895, 0.00692716, -0.517565, 0.269741, 0.688849, 2.56114e-08, -0.0117697, 0.472409, 0.11083, 0.0165157)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_finger_joints" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand"]
+transform = Transform3D(1, 0, 1.0915e-15, -1.42109e-14, 1, 2.30926e-14, -5.43509e-15, 0, 1, 0, 4.76837e-07, 0.0692371)
+
+[node name="left_hand_thumb_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_left_hand_thumb_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_thumb_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container"]
+transform = Transform3D(0.00760515, 0.370134, 0.562181, 0.00416309, -0.676344, 0.307658, 0.413909, 1.82456e-06, -0.0134239, 0.436369, 0.11083, -0.103061)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_thumb_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint"]
+transform = Transform3D(0.83649, 0.0101558, 1.78814e-07, -0.0146496, 0.145851, -0.800265, -0.0252718, 0.251606, 0.463897, -0.073102, 0.291798, 0.460655)
+cast_shadow = 0
+size = Vector3(0.77, 1.865, 0.635)
+
+[node name="csg_left_hand_thumb_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint/csg_left_hand_thumb_1"]
+transform = Transform3D(0.900001, -5.5746e-08, -5.58794e-09, 2.62953e-08, 1.908, 7.90745e-09, 5.58794e-09, -1.67638e-08, 0.9, -0.0081888, 1.01423, 0.0588474)
+cast_shadow = 0
+
+[node name="csg_left_hand_thumb_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_thumb_joint/csg_left_hand_thumb_container/csg_left_hand_thumb_joint/csg_left_hand_thumb_1/csg_left_hand_thumb_joint_2"]
+transform = Transform3D(0.823, 5.23869e-10, 1.86265e-09, -4.41651e-09, 0.769, -9.31323e-10, -2.79397e-09, -3.72529e-09, 0.655, -0.00985929, 0.628109, -0.0562134)
+cast_shadow = 0
+size = Vector3(1, 1.19, 1)
+
+[node name="left_hand_index_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_left_hand_index_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint"]
+transform = Transform3D(1, 0, 0, -3.55271e-15, 1, 0, 1.05879e-22, 0, 1, 0, 0, 0)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_index_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container"]
+transform = Transform3D(0.291, 3.7166e-14, -5.15202e-22, -2.93098e-14, 0.369, 1.0968e-14, 3.17636e-22, -8.57453e-15, 0.472, 0.328139, 0.461989, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_index_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint"]
+transform = Transform3D(0.997228, 0.0680785, -1.86454e-09, -0.0744027, 0.912464, 6.70559e-11, 1.86436e-09, 6.57488e-11, 1, 0.0327935, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_left_hand_index_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint/csg_left_hand_index_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.9755e-09, 1.18758e-08, 2.97553e-09, 1, 0.0102048, 0.997633, 0.0380554)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_index_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_index_joint/csg_left_hand_index_container/csg_left_hand_index_joint/csg_left_hand_index_1/csg_left_hand_index_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.9755e-09, -1.18758e-08, 2.97548e-09, 1, -0.501374, 0.926777, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="left_hand_middle_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -3.17637e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_left_hand_middle_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_middle_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container"]
+transform = Transform3D(0.291, 3.98978e-14, -5.5814e-22, -3.37508e-14, 0.344, 1.21866e-14, 3.44108e-22, -8.88177e-15, 0.472, 0.00146127, 0.461989, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_middle_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint"]
+transform = Transform3D(0.999918, 0.0157761, -3.14544e-10, -0.0128261, 1.2299, -1.16273e-13, 3.14517e-10, 5.10529e-12, 1, -0.0313773, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_left_hand_middle_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint/csg_left_hand_middle_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.9755e-09, 1.18758e-08, 2.97553e-09, 1, 0.0102048, 0.997632, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_middle_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_middle_joint/csg_left_hand_middle_container/csg_left_hand_middle_joint/csg_left_hand_middle_1/csg_left_hand_middle_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.9755e-09, -1.18758e-08, 2.97548e-09, 1, -0.501374, 0.926777, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="left_hand_ring_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_left_hand_ring_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_ring_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container"]
+transform = Transform3D(0.246, 5.77856e-14, -6.01054e-22, -4.88497e-14, 0.291, 1.82672e-14, 3.70577e-22, -1.33227e-14, 0.399, -0.255553, 0.353774, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_ring_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint"]
+transform = Transform3D(0.881863, -0.471506, 1.18758e-08, 0.471506, 0.881863, 2.97552e-09, -1.18758e-08, 2.97551e-09, 1, -0.558716, 0.895164, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.895, 0.635)
+
+[node name="csg_left_hand_ring_joint_2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint/csg_left_hand_ring_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.97547e-09, 1.18758e-08, 2.97555e-09, 1, 0.037714, 1.17963, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_ring_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_ring_joint/csg_left_hand_ring_container/csg_left_hand_ring_joint/csg_left_hand_ring_1/csg_left_hand_ring_joint_2"]
+transform = Transform3D(0.881863, -0.471504, 1.18758e-08, 0.471506, 0.881864, 2.97549e-09, -1.18758e-08, 2.97548e-09, 1, -0.565642, 1.00633, -0.0380533)
+cast_shadow = 0
+size = Vector3(0.77, 1.72, 0.635)
+
+[node name="left_hand_pinky_joint" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints"]
+transform = Transform3D(1, 0, -5.29396e-23, 0, 1, 1.77636e-15, -4.23516e-22, 0, 1, 0, 0, 0.140549)
+
+[node name="csg_left_hand_pinky_container" type="CSGCombiner3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint"]
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_pinky_joint" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container"]
+transform = Transform3D(0.216, 6.70083e-14, 2.1686e-15, -4.97381e-14, 0.291, 1.09603e-14, -1.17398e-15, -7.9936e-15, 0.399, -0.415213, 0.0834584, -0.124837)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_pinky_1" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint"]
+transform = Transform3D(0.724039, -0.689758, 1.73729e-08, 0.68976, 0.724039, 6.95062e-09, -1.7373e-08, 6.95061e-09, 1, -0.815309, 0.776979, -0.0380531)
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="csg_left_hand_pinky_joint2" type="CSGSphere3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint/csg_left_hand_pinky_1"]
+transform = Transform3D(0.881863, 0.471506, -1.18758e-08, -0.471506, 0.881862, 2.97549e-09, 1.18758e-08, 2.97554e-09, 1, 0.0308332, 1.02361, 0.0380533)
+material_override = ExtResource("2_35ee3")
+cast_shadow = 0
+
+[node name="csg_left_hand_pinky_2" type="CSGBox3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/csg_left_hand_finger_joints/left_hand_pinky_joint/csg_left_hand_pinky_container/csg_left_hand_pinky_joint/csg_left_hand_pinky_1/csg_left_hand_pinky_joint2"]
+transform = Transform3D(0.881863, -0.471506, 1.18758e-08, 0.471506, 0.881863, 2.97553e-09, -1.18758e-08, 2.9755e-09, 1, -0.481831, 0.873873, -0.0380533)
+visible = false
+cast_shadow = 0
+size = Vector3(0.77, 1.53, 0.635)
+
+[node name="magazines" type="Node3D" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand"]
+
+[node name="coilcarbine_magazine_lh" parent="arms/csg_arms_combiner/left_arm/csg_left_arm_combiner/left_arm/csg_upper_arm_left/csg_left_joint_combiner/left_arm_joint/csg_left_arm_joint/csg_lower_arm_left_combiner/lower_arm_left/csg_lower_arm_left/csg_left_hand_joint_combiner/csg_left_hand_joint/csg_left_hand_joint/csg_left_hand_container/left_hand/csg_left_hand/magazines" instance=ExtResource("5_7eskj")]
+transform = Transform3D(-0.0452117, -0.00669765, 0.752265, -0.981539, 0.22568, -0.0323137, 0.202864, 1.09044, 0.0113083, 0.635246, 0.659513, 0.640513)
+visible = false
+
+[node name="fps_rig_animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bsyi3")
+}
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

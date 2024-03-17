@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://dscw0cesv2hia"]
+
+[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_7xcge"]
+[ext_resource type="PackedScene" uid="uid://dfliv7al3x36j" path="res://Scenes/Player/fps_rig.tscn" id="2_bujha"]
+[ext_resource type="Script" path="res://Scripts/Player/timer.gd" id="4_kossk"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/player_state_machine.gd" id="5_0x0o2"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/idle_player_state.gd" id="6_ekifb"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/player_walk_state.gd" id="7_r58k7"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/jump_player_state.gd" id="8_3k0bc"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/sprint_player_state.gd" id="9_rnauh"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/air_player_state.gd" id="10_wxqud"]
+[ext_resource type="Script" path="res://Scripts/Player/state_machine/charge_player_state.gd" id="11_03obe"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pyk1k"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[node name="player_character" type="CharacterBody3D" node_paths=PackedStringArray("camera_node", "player_camera", "fps_rig", "timers", "player_character_area", "state_machine", "rig_node") groups=["collidable"]]
+collision_mask = 16382
+script = ExtResource("1_7xcge")
+camera_node = NodePath("camera_node")
+player_camera = NodePath("camera_node/player_camera")
+fps_rig = NodePath("camera_node/player_camera/rig_node/fps_rig")
+timers = NodePath("timers")
+player_character_area = NodePath("player_character_area")
+state_machine = NodePath("state_machine")
+rig_node = NodePath("camera_node/player_camera/rig_node")
+
+[node name="collisionshape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_pyk1k")
+
+[node name="camera_node" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.825842, -0.177633)
+
+[node name="player_camera" type="Camera3D" parent="camera_node"]
+current = true
+
+[node name="rig_node" type="Node3D" parent="camera_node/player_camera"]
+
+[node name="fps_rig" parent="camera_node/player_camera/rig_node" instance=ExtResource("2_bujha")]
+transform = Transform3D(-0.32, 0, -4.83187e-08, 0, 0.32, 0, 4.83187e-08, 0, -0.32, 0, 0, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="camera_node/player_camera"]
+update_mode = 1
+max_distance = 1.4
+
+[node name="player_character_area" type="Area3D" parent="."]
+
+[node name="collisionshape3D_player_area" type="CollisionShape3D" parent="player_character_area"]
+transform = Transform3D(1.56, 0, 0, 0, 1.56, 0, 0, 0, 1.56, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_pyk1k")
+
+[node name="timers" type="Node" parent="."]
+script = ExtResource("4_kossk")
+
+[node name="timer_charge" type="Timer" parent="timers"]
+autostart = true
+
+[node name="timer_unmoveable_charged" type="Timer" parent="timers"]
+autostart = true
+
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
+script = ExtResource("5_0x0o2")
+current_state = NodePath("idle_state")
+
+[node name="idle_state" type="Node" parent="state_machine"]
+script = ExtResource("6_ekifb")
+
+[node name="walk_state" type="Node" parent="state_machine"]
+script = ExtResource("7_r58k7")
+
+[node name="jump_state" type="Node" parent="state_machine"]
+script = ExtResource("8_3k0bc")
+
+[node name="sprint_state" type="Node" parent="state_machine"]
+script = ExtResource("9_rnauh")
+
+[node name="air_state" type="Node" parent="state_machine"]
+script = ExtResource("10_wxqud")
+
+[node name="charge_state" type="Node" parent="state_machine"]
+script = ExtResource("11_03obe")
+
+[connection signal="timeout" from="timers/timer_charge" to="timers" method="_on_timer_charge_timeout"]
+[connection signal="timeout" from="timers/timer_unmoveable_charged" to="timers" method="_on_timer_unmoveable_charged_timeout"]

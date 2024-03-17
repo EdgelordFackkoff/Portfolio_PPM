@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://dg3t7hdcp28en"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/cooking_grounds.gd" id="1_cvmmo"]
+[ext_resource type="PackedScene" uid="uid://dijlrqe141ana" path="res://Scenes/Player/player_character.tscn" id="3_8qfjf"]
+[ext_resource type="PackedScene" uid="uid://bil7w4n3rrs23" path="res://Scenes/Enviroments/wall_base.tscn" id="3_lkr70"]
+[ext_resource type="Material" uid="uid://br8t3inx8slq2" path="res://Materials/Levels/cooking_grounds/cooking_ground_grid.tres" id="3_vrj55"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2oe5p"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_81a8h"]
+sky_material = SubResource("ProceduralSkyMaterial_2oe5p")
+
+[sub_resource type="Environment" id="Environment_a6c6r"]
+background_mode = 2
+sky = SubResource("Sky_81a8h")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_u05ki"]
+size = Vector3(25, 0.2, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ow1n0"]
+size = Vector3(25, 0.2, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t5fsq"]
+size = Vector3(25, 25, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oc5ak"]
+margin = 0.05
+size = Vector3(25, 25, 0.5)
+
+[node name="cooking_grounds" type="Node3D"]
+script = ExtResource("1_cvmmo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a6c6r")
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="floors" type="Node3D" parent="environment"]
+
+[node name="floor_1_mesh" type="MeshInstance3D" parent="environment/floors"]
+material_override = ExtResource("3_vrj55")
+mesh = SubResource("BoxMesh_u05ki")
+skeleton = NodePath("floor_1_static_body")
+
+[node name="floor_1_static_body" type="StaticBody3D" parent="environment/floors/floor_1_mesh" groups=["collidable", "floor"]]
+collision_layer = 2048
+
+[node name="floor_1_col_shape" type="CollisionShape3D" parent="environment/floors/floor_1_mesh/floor_1_static_body"]
+shape = SubResource("BoxShape3D_ow1n0")
+
+[node name="walls" type="Node3D" parent="environment"]
+
+[node name="wall_static_body" parent="environment/walls" instance=ExtResource("3_lkr70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.3358, 12.6893)
+
+[node name="wall_mesh" parent="environment/walls/wall_static_body" index="0"]
+mesh = SubResource("BoxMesh_t5fsq")
+
+[node name="wall_col_shape" parent="environment/walls/wall_static_body" index="1"]
+shape = SubResource("BoxShape3D_oc5ak")
+
+[node name="entities" type="Node3D" parent="."]
+
+[node name="player" parent="entities" instance=ExtResource("3_8qfjf")]
+
+[node name="environment2" type="Node3D" parent="."]
+
+[editable path="environment/walls/wall_static_body"]
